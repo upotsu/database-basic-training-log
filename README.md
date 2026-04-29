@@ -1,6 +1,78 @@
 # 2024BeginnerTrainingDataBaseBasic
 24新卒技術研修_データベース研修_DB設計基礎
 
+# Database Basic Training Log
+
+MIXI GROUP が公開しているデータベース基礎研修教材を使用し、  
+ローカル環境で各種データベースの基本操作を実践した学習記録です。
+
+## 元教材
+
+- https://github.com/mixigroup/2024BeginnerTrainingDataBaseBasic
+
+## 学習目的
+
+- RDB / NoSQL / インメモリDB の基本的な違いを理解する
+- Docker Compose を使って各DBをローカルで起動する
+- 各DBの基本的なCRUD操作を実行する
+- SQLインジェクションの基本的な仕組みと対策を理解する
+
+## 実施内容
+
+| 技術 | 学習内容 | 状況 |
+|---|---|---|
+| MySQL | テーブル作成、INSERT、SELECT、JOIN、UPDATE、DELETE、ROLLBACK | 完了 |
+| DynamoDB Local | put-item、scan、get-item、GSI、update-item、delete-table | 完了 |
+| MongoDB | insertMany、find、ネスト検索、配列検索、updateMany、deleteMany | 完了 |
+| Cassandra | keyspace作成、テーブル作成、CSVロード、SELECT、ALLOW FILTERING、UPDATE、DROP | 完了 |
+| Redis | SET / GET、TTL、INCR、List、Set、Hash、FLUSHALL | 完了 |
+| Juice Shop | Docker起動、SQLインジェクション演習、スコアボード確認 | 完了 |
+
+## 学習メモ
+
+### MySQL
+
+リレーショナルデータベースの基本操作を確認しました。  
+テーブル作成、データ投入、条件検索、JOIN、更新、削除、rollback の挙動を実行しました。
+
+### DynamoDB Local
+
+Key-Value / Document型DBとして、プライマリキーによる取得、scan、GSIを使った検索を確認しました。  
+DynamoDBでは、事前にアクセスパターンを考えてキー設計する重要性を学びました。
+
+### MongoDB
+
+JSONに近いドキュメント形式でデータを保存し、ネストした項目や配列に対する検索を確認しました。  
+環境上、教材のMongoDBイメージではコンテナが終了したため、学習用に `mongo:7` へ変更して実行しました。
+
+### Cassandra
+
+ワイドカラム型DBとして、keyspace、テーブル作成、CSVロード、Primary Keyを使った検索を実行しました。  
+Cassandraでは、Primary Key設計が検索方法に強く影響することを確認しました。
+
+### Redis
+
+インメモリKey-Valueストアとして、文字列、TTL、カウンター、リスト、セット、ハッシュを操作しました。  
+キャッシュ、セッション管理、カウンター、キュー用途に向いていることを確認しました。
+
+### Juice Shop
+
+脆弱性学習用アプリをDockerで起動し、SQLインジェクションによるログイン回避の仕組みを確認しました。  
+ユーザー入力をSQL文字列へ直接連結する危険性と、プリペアドステートメントの重要性を学びました。
+
+## 使用環境
+
+- Windows 11
+- PowerShell
+- Docker Desktop
+- Docker Compose
+- Git / GitHub
+
+## 備考
+
+このリポジトリは、公開教材を用いた個人学習記録です。  
+元教材の著作権・ライセンスは、元リポジトリに従います。
+
 
 ## Git クローン
 
